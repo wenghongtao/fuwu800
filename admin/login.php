@@ -17,7 +17,7 @@
 	  <td><input type="text" name="password" /></td>
 	</tr>
   </table>
-  <div><input type="submit" name="password" value="登录" /></div>
+  <div><input type="submit" value="登录" /></div>
 </form>
 </div>
 </body>
