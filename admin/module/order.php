@@ -1,3 +1,21 @@
+<?php 
+include_once '../../include/conn.php';
+
+session_start();
+if (!isset($_SESSION["user"])) {
+	header("Location: ../login.php");  
+}
+
+global $db;
+
+//订单列表信息
+$order = $db->get_results("select * from order_infos");
+	
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,16 +77,24 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php 
+                	foreach ($order as $value) {
+                ?>
                 	<tr class="tr_nav2">
-                		<td></td>
-                		<td></td>
-                		<td></td>
-                		<td></td>
-                		<td></td>
-                		<td></td>
-                		<td></td>
-                		<td></td>
+                		<td><?php echo $value->order_sn; ?></td>
+                		<td><?php echo $value->order_id; ?></td>
+                		<td><?php echo $value->user_id; ?></td>
+                		<td><?php echo $value->created_at; ?></td>
+                		<td><?php echo $value->order_amount; ?></td>
+                		<td><?php echo $value->pay_fee; ?></td>
+                		<td><?php echo $value->created_at; ?></td>
+                		<td><?php echo $value->order_status; ?></td>
+                		<td><a>查看状态</a></td>
                     </tr>            
+                	
+                	
+                	<?php } ?>
+                	
                 </tbody>
             </table>
         </div>
