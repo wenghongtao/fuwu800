@@ -2,10 +2,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<link rel="Stylesheet" type="text/css" href="css/site.css" />
+<title>欢迎来fuwu800逛逛</title>
 </head>
 <body>
-你好！
 
+<?php include 'include/header.inc'; ?>
+
+<div>contents</div>
+
+<?php include 'include/footer.inc'; ?>
 </body>
 </html>
