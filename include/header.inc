@@ -1,5 +1,5 @@
 <?php require_once(dirname ( __FILE__ ) . '/config.inc'); ?>
-<?php echo $URL_ROOT; ?>
+
 <div class="header_wrap">
 <div class="head_operate">
 <ul class="head_operate_nav">
