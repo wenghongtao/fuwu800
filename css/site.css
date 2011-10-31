@@ -92,7 +92,8 @@ a:hover{color:#336699;}
 .head_operate_nav .head_gcard_list li a{width:45px;text-align:left;color:#404040;font-size:12px;text-decoration:none;border:none;border-bottom:solid 1px #f5f4f4; color:#404040;height:21px;padding:2px 0 0 0;}
 .head_operate_nav .head_mydd_list li a.hover,.head_operate_nav .head_mydd_list li a:hover,.head_operate_nav .head_gcard_list li a:hover,.head_operate_nav .head_gcard_list li a.hover{color:#f60;text-decoration:none;background:#ffbd91;color:#fff;position:relative;margin:0 -6px;padding:2px 6px;}
 
-
+.header_menu { margin: 0 auto; width: 960px; text-align: center; }
+.header_menu ul li { display: inline-block; margin: 10px 20px;}
 
 /*底部*/
 .footer_wrapper {width:100%;margin:0 auto;background:#f9f9f9 url(http://img4.ddimg.cn/header/header2010/bg_footer_0826.gif) repeat-x 0 -150px;padding:20px 0 35px;font:12px "宋体", Arial, Helvetica, sans-serif;clear:both;}

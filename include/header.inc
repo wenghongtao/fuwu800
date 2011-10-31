@@ -1,3 +1,7 @@
+<?php require_once(dirname ( __FILE__ ) . '/config.inc'); ?>
+$ABSPATH = URL_ROOT;
+
+<?php echo $ABSPATH; ?>
 <div class="header_wrap">
 <div class="head_operate">
 <ul class="head_operate_nav">
@@ -8,10 +12,10 @@
 		target="_blank">我的订单</a></li>
 	<li class="head_separate"></li>
 	<li class="head_mydd"><a
-		href="http://my.dangdang.com/myhome/homepage.aspx" target="_blank"
+		href="<?php $ROOT.'myhome/homepage.php' ?>" target="_blank"
 		class="menu_btn" id="a_myddchannel"
 		onmouseover="showgaoji('a_myddchannel','__ddnav_mydd')"
-		onmouseout="hideotherchannel('a_myddchannel','__ddnav_mydd');">我的中心</a>
+		onmouseout="hideotherchannel('a_myddchannel','__ddnav_mydd');">用户中心</a>
 	<div class="head_mydd_panel"
 		onmouseover="showgaoji('a_myddchannel','__ddnav_mydd')"
 		onmouseout="hideotherchannel('a_myddchannel','__ddnav_mydd');"
@@ -81,6 +85,17 @@
 	target="_self" class="login_link">登录</a><a name="ddnav_register"
 	href="https://login.dangdang.com/Register.aspx" target="_self"
 	class="login_link">免费注册</a></p>
+</div>
+
+<div class="header_menu">
+	<ul>
+		<li><a href="<?php $ROOT.'index.php' ?>">首页</a></li>
+		<li><a href="<?php $ROOT.'products.php' ?>">产品</a></li>
+		<li><a href="<?php $ROOT.'diy.php' ?>">自选配件</a></li>
+		<li><a href="<?php $ROOT.'tuan.php' ?>">今日团购</a></li>
+		<li><a href="<?php $ROOT.'activity.php' ?>">优惠活动</a></li>
+		<li><a href="<?php $ROOT.'myhome/homepage.php' ?>">我的账户</a></li>		
+	</ul>
 </div>
 
 </div>

@@ -48,6 +48,13 @@
         </div>
       	<div style="clear: both;"></div>
       	
+      	<div class="footer_pic">
+	      <a href="http://support.dangdang.com/helpcenter/api_cms/helpcenter/question_sort/2242/180110.shtml" target="_blank" class="footer_pic01">正品保证 假一罚一</a>
+	      <a class="footer_pic02" href="http://promo.dangdang.com/" target="_blank">一网打尽 更多优惠</a>
+	      <a class="footer_pic03" href="http://blog.dangdang.com/?p=5770#ref=www-0-F" target="_blank">800城市货到付款 北上广深当日达</a>
+	      <a class="footer_pic04" href="http://support.dangdang.com/helpcenter/api_cms/helpcenter/question_sort/2242/179422.shtml" target="_blank">上门退货当场退款</a>
+	    </div>
+	    
 		<div class="footer_nav">
 			<a href="http://static.dangdang.com/topic/2227/176801.shtml" target="_blank">公司简介</a><span class="sep">|</span> <a
 			href="http://ir.dangdang.com/" target="_blank">Investor Relations</a><span
