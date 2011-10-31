@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+
+/* 分页样式  */
+.pages {
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+.pages li {
+display:inline;
+float:left;
+padding:0px 5px;
+height:21px;
+color:#666;
+line-height:21px;
+margin-right: 0.3em;
+border: 1px solid #E0E0E0;
+background:#FFF;
+}
+.pages li span {
+color:#cc3300;
+background:#FFF;
+}
+.pages li.page_a {
+padding:0;
+border:0;
+}
+.pages li.page_a a {
+FLOAT: left;
+padding:0px 5px;
+color:#0044DD;
+border: 1px solid #E0E0E0;
+}
+.pages li.page_a a:hover {
+color:red;
+border: 1px solid #A0A0A0;
+}
+.pages li.pages_input {
+padding:0;
+border: 1px solid #A0A0A0;
+}
+.pages li.pages_input input {
+width:18px;
+font-size:14px;
+border:0px;
+padding:0px 3px;
+margin:0px 3px;
+text-align:center;
+}
+.pages .on {
+padding:0px 5px;
+color: red;
+font-weight:bold;
+}

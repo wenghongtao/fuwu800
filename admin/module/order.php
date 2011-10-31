@@ -1,5 +1,6 @@
 <?php 
 include_once '../../include/conn.php';
+include_once '../../lib/page.class.php';
 
 session_start();
 if (!isset($_SESSION["user"])) {
@@ -9,8 +10,15 @@ if (!isset($_SESSION["user"])) {
 global $db;
 
 //订单列表信息
-$order = $db->get_results("select * from order_infos");
-	
+$page=$_GET['page'];
+$order = $db->get_results("select * from order_infos WHERE 1");
+
+$totail = count($order); //总条数
+$number = 5;//每页显示条数
+//参数设定：总记录，每页显示的条数，当前页，连接的地址
+$my_page = new PageClass($totail,$number,$page,'?page={page}');
+$sql = "SELECT * FROM order_infos WHERE 1 LIMIT ".$my_page->page_limit.",".$my_page->myde_size;
+$order_p = $db->get_results($sql);
 
 
 
@@ -23,6 +31,7 @@ $order = $db->get_results("select * from order_infos");
 <title>订单列表</title>
     <link href="../Styles/main.css" rel="stylesheet" type="text/css" />
     <link rel="Stylesheet" type="text/css" href="../css/admin.css" />
+    <link rel="Stylesheet" type="text/css" href="../css/page.css" />
     <script type="text/javascript" src="../../js/jquery-1.6.4.js"></script>
 </head>
 <body>
@@ -78,7 +87,7 @@ $order = $db->get_results("select * from order_infos");
                 </thead>
                 <tbody>
                 <?php 
-                	foreach ($order as $value) {
+                	foreach ($order_p as $value) {
                 ?>
                 	<tr class="tr_nav2">
                 		<td><?php echo $value->order_sn; ?></td>
@@ -98,7 +107,9 @@ $order = $db->get_results("select * from order_infos");
                 </tbody>
             </table>
         </div>
-       
+        <?php
+   			echo $my_page->myde_write();//输出分页
+	    ?>
     </div>
 
 </body>

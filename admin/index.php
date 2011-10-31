@@ -94,7 +94,7 @@ if (!isset($_SESSION["user"])) {
                         <div class="cc"></div>                        
                         <ul>
                         	<li><a href="#" onclick="go('module/order.php')">订单管理</a></li>
-                        	<li><a href="#" onclick="go()">订单管理</a></li>
+                        	<li><a href="#" onclick="go('module/goods.php')">商品管理</a></li>
                         	<li><a href="#" onclick="go()">订单管理</a></li>
                         	<li><a href="#" onclick="go()">订单管理</a></li>
                         	<li><a href="#" onclick="go()">订单管理</a></li>
