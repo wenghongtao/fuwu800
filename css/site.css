@@ -126,3 +126,6 @@ a:hover{color:#336699;}
 .footer .footer_police {padding-top:10px;text-align:center;}
 .footer .footer_icon {margin:10px 0 0 170px;height:57px;}
 .footer .validator, .footer .knet, .footer .bjwhzf {float:left;display:inline;padding:0 5px;width:135px;height:47px;}
+
+/* 首页 */
+.home_wrapper { margin: 0 auto; width: 960px; }

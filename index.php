@@ -9,7 +9,7 @@
 
 <?php include 'include/header.inc'; ?>
 
-<div>contents</div>
+<div class="home_wrapper">contents</div>
 
 <?php include 'include/footer.inc'; ?>
 </body>
