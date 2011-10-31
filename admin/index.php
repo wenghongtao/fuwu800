@@ -1,14 +1,39 @@
+<?php 
+session_start();
+if (!isset($_SESSION["user"])) {
+	header("Location: login.php");  
+}
+ 
+ $action = $_POST["action"]; 
+ if ($action == "logout") {
+ 	unset($_SESSION["user"]);
+ }
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>后台管理</title>
-<link rel="Stylesheet" type="text/css" href="../css/site.css" />
+<link rel="Stylesheet" type="text/css" href="css/site.css" />
 <script type="text/javascript" src="../js/jquery-1.6.4.min.js"></script>
 <script type="text/javascript">
+		//退出系统
+		function logout(){
+			$.ajax({
+			   type: "POST",
+			   url: "index.php",
+			   data: "action=logout",
+			   success: function(){
+				  location.href="login.php";
+			   }
+									   
+			});		
+		}
+
         $(document).ready(function () {
             $(".con li").mouseover(function () {
-                $(this).css("background", "url(../Images/admin/main-left-hover.gif) no-repeat");
+                $(this).css("background", "url(Images/main-left-hover.gif) no-repeat");
             });
 
             $(".con li").mouseout(function () {
@@ -59,7 +84,7 @@
 <body>
 	<div style="width:160px; float:left; height:100%;">
          <div class="logo">
-                    <img width="160" height="43" alt="logo" src="../Images/admin/logo.gif" />
+                    <img width="160" height="43" alt="logo" src="Images/logo.gif" />
                     <div class="lun"><span style="color:#ff0000">V2.0.0</span> build 20110615 </div>
             </div>
              <div id="main_fl">
@@ -68,7 +93,7 @@
                         <h1>常用操作</h1>
                         <div class="cc"></div>                        
                         <ul>
-                        	<li><a href="#" onclick="go('model/order.php')">订单管理</a></li>
+                        	<li><a href="#" onclick="go('module/order.php')">订单管理</a></li>
                         	<li><a href="#" onclick="go()">订单管理</a></li>
                         	<li><a href="#" onclick="go()">订单管理</a></li>
                         	<li><a href="#" onclick="go()">订单管理</a></li>
@@ -141,10 +166,11 @@
             <li id="nav4" onclick="return setTab('nav',4,4)"><em><a href="#">用户管理</a></em></li>
         </ul>
         <div class="wei">
-             <span >用户名：</span><a href="login.php"> (退出系统) </a> &nbsp; | <a href="#" onclick="go('model/index.php')">控制面板首页</a> | <a href="../index.php">访问前台</a> | <a href="javascript:void(0)" onclick="historyBack()">退后一页</a>
+             <span >用户名：</span><a href="#" onclick="logout()"> (退出系统) </a>
+              &nbsp; | <a href="#" onclick="go('module/index.php')">控制面板首页</a> | <a href="../index.php">访问前台</a> | <a href="javascript:void(0)" onclick="historyBack()">退后一页</a>
          </div>
         <div id="mainright" style=" margin:5px;">
-         <iframe name="main" id="iframeMain" frameborder="0" width="98%" height="98%"  scrolling="yes"  src="model/index.php"> </iframe>
+         <iframe name="main" id="iframeMain" frameborder="0" width="98%" height="98%"  scrolling="yes"  src="module/index.php"> </iframe>
          </div>
     </div>
 
