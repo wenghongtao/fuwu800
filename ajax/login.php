@@ -12,6 +12,7 @@ function login($userName,$password) {
 	$has_pwd = $db->get_var($sql);
 	
 	if ($has_pwd == md5($password)) {
+		
 		header("Location: ../admin/index.php");  
 	}else
 	{
