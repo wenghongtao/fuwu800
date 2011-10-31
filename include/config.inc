@@ -1,3 +1,3 @@
 <?php
-define ('URL_ROOT','/fuwu800/');
+$URL_ROOT = '/fuwu800/';
 ?>

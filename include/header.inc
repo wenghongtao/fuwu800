@@ -1,7 +1,5 @@
 <?php require_once(dirname ( __FILE__ ) . '/config.inc'); ?>
-$ABSPATH = URL_ROOT;
-
-<?php echo $ABSPATH; ?>
+<?php echo $URL_ROOT; ?>
 <div class="header_wrap">
 <div class="head_operate">
 <ul class="head_operate_nav">
@@ -12,7 +10,7 @@ $ABSPATH = URL_ROOT;
 		target="_blank">我的订单</a></li>
 	<li class="head_separate"></li>
 	<li class="head_mydd"><a
-		href="<?php $ROOT.'myhome/homepage.php' ?>" target="_blank"
+		href="<?php echo $URL_ROOT.'myhome/homepage.php' ?>" target="_blank"
 		class="menu_btn" id="a_myddchannel"
 		onmouseover="showgaoji('a_myddchannel','__ddnav_mydd')"
 		onmouseout="hideotherchannel('a_myddchannel','__ddnav_mydd');">用户中心</a>
@@ -89,12 +87,12 @@ $ABSPATH = URL_ROOT;
 
 <div class="header_menu">
 	<ul>
-		<li><a href="<?php $ROOT.'index.php' ?>">首页</a></li>
-		<li><a href="<?php $ROOT.'products.php' ?>">产品</a></li>
-		<li><a href="<?php $ROOT.'diy.php' ?>">自选配件</a></li>
-		<li><a href="<?php $ROOT.'tuan.php' ?>">今日团购</a></li>
-		<li><a href="<?php $ROOT.'activity.php' ?>">优惠活动</a></li>
-		<li><a href="<?php $ROOT.'myhome/homepage.php' ?>">我的账户</a></li>		
+		<li><a href="<?php echo $URL_ROOT.'index.php' ?>">首页</a></li>
+		<li><a href="<?php echo $URL_ROOT.'products.php' ?>">产品</a></li>
+		<li><a href="<?php echo $URL_ROOT.'diy.php' ?>">自选配件</a></li>
+		<li><a href="<?php echo $URL_ROOT.'tuan.php' ?>">今日团购</a></li>
+		<li><a href="<?php echo $URL_ROOT.'activity.php' ?>">优惠活动</a></li>
+		<li><a href="<?php echo $URL_ROOT.'myhome/homepage.php' ?>">我的账户</a></li>		
 	</ul>
 </div>
 
